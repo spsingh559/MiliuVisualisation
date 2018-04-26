@@ -12,7 +12,7 @@ var app = express();
 var compiler = webpack(config);
 var http = require('http');
 var fs=require('fs');
-var port1 = process.env.PORT;
+var port1 = process.env.PORT || 8080;
 var multipart = require('connect-multiparty');
 
 var multipartMiddleware = multipart();
