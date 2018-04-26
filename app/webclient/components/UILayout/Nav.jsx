@@ -78,7 +78,7 @@ export default class Nav extends React.Component{
   //   this.context.router.push('/newTrade');
   // }
   upcomingNavigation=()=>{
-    this.context.router.push('/upcomingProjects');
+    this.context.router.push('/login');
   }
   scrumNavigation=()=>{
     this.context.router.push('/scrumReport');
@@ -112,8 +112,8 @@ export default class Nav extends React.Component{
              style={{position: "fixed",top:'0'}}
             >
               
-           {/* <FlatButton style={style.labelStyle1} label="Upcoming Projects" onTouchTap={this.upcomingNavigation} />
-           <FlatButton style={style.labelStyle} label="Current Projects" onTouchTap={this.networkNavigation} />
+            {/* <FlatButton style={style.labelStyle1} label="End Demo" onTouchTap={this.upcomingNavigation} /> */}
+           {/* <FlatButton style={style.labelStyle} label="Current Projects" onTouchTap={this.networkNavigation} />
            <FlatButton style={style.labelStyle} label="Completed Projects" onTouchTap={this.networkTestingNavigation} />
         
            <List>
@@ -125,7 +125,7 @@ export default class Nav extends React.Component{
                   }
                 >
                 </ListItem>
-          </List> */}
+          </List>  */}
            </AppBar>
          
            {/* <Drawer

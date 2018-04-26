@@ -1,10 +1,12 @@
 .background{
-  background-image: url("../images/digi.jpg");
+  background-image: url("../images/Block Chain image.jpg");
   position: relative;
-  height: 800px;
+  height: 660px;
+  /* width: 1000px;  */
  overflow: hidden;
- background-repeat: repeat;
- color: azure
+ background-size: 1400px 660px;
+ /* background-repeat: repeat; */
+ background-repeat: no-repeat;
   /*background-color: GHOSTWHITE;*/
   /*opacity:0.5;*/
 

@@ -17,6 +17,13 @@ export default class UBITx extends React.Component{
 
         return(
             <Table striped  condensed hover style={{bottom:"0", position:"absolute"}}>
+            {/* <thead>
+    <tr>
+      <th>Transaction Hash</th>
+      <th>Block</th>
+      <th>Request Status</th>
+    </tr>
+  </thead> */}
   <tbody>
       {newData}
       </tbody>

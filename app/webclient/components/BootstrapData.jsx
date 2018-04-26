@@ -6,22 +6,25 @@ export default class BootstrapData extends React.Component{
 
     render(){
         let newData=this.props.txData.map((data,i)=>{
-            return(
-            <BootstrapDataRow
-            key={i}
-            data={data}
-            />
-            )
+            // setTimeout(()=>{
+                return(
+                    <BootstrapDataRow
+                    key={i}
+                    data={data}
+                    />
+                    )
+            //   },1000)
+           
         })
 
         return(
             <Table striped  condensed hover>
   <thead>
     <tr>
-      <th>Tx</th>
+      <th>Transaction Hash</th>
       <th>Block</th>
-      <th>User</th>
-      <th>KYC Agency</th>
+      <th>Identity Owner</th>
+      <th>Identity Provider</th>
     </tr>
   </thead>
   <tbody>

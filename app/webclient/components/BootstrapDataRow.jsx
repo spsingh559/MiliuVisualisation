@@ -3,10 +3,10 @@ import React from 'react';
 export default class BootstrapDataRow extends React.Component{
 
     render(){
-
+console.log('tx'+ this.props.data.tx);
         return(
             <tr>
-                <td>
+                <td >
                     {this.props.data.tx}
                     </td>
                     <td>
