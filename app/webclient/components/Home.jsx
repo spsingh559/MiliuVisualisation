@@ -14,6 +14,7 @@ import BootstrapData from './BootstrapData';
 import UBITx from './UBITx';
 import Validator from './Validator';
 import Miliu from './Miliu'
+// import Paper from 'material-ui/Paper';
 
 var obj = { userData:[
    [ 'Samantha',
@@ -313,56 +314,56 @@ const style=
 {
   row1col1:{
     height:"100px",
-    width:"450px",
-    backgroundColor:"#CCF052"
+    width:"33%",
+    backgroundColor:"#A5EBA7"
   
   },
   row1col2:{
     height:"100px",
-    width:"450px",
-    backgroundColor:"#B3B7AF"
+    width:"33%",
+    backgroundColor:"#B3FDB0"
    
   },
   row1col3:{
     height:"100px",
-    width:"470px",
-    backgroundColor:"#F0A152"
+    width:"33%",
+    backgroundColor:"#8ED090"
     
   },
   row2col1:{
     height:"150px",
-    width:"450px",
-    backgroundColor:"#CCF052"
+    width:"33%",
+    backgroundColor:"#A5EBA7"
   
   },
   row2col2:{
     height:"150px",
-    width:"450px",
-    backgroundColor:"#B3B7AF"
+    width:"33%",
+    backgroundColor:"#B3FDB0"
    
   },
   row2col3:{
     height:"150px",
-    width:"470px",
-    backgroundColor:"#F0A152"
+    width:"33%",
+    backgroundColor:"#8ED090"
     
   },
   row3col1:{
     height:"250px",
-    width:"450px",
-    backgroundColor:"#CCF052"
+    width:"33%",
+    backgroundColor:"#A5EBA7"
   
   },
   row3col2:{
     height:"250px",
-    width:"450px",
-    backgroundColor:"#B3B7AF"
+    width:"33%",
+    backgroundColor:"#B3FDB0"
    
   },
   row3col3:{
     height:"250px",
-    width:"470px",
-    backgroundColor:"#F0A152"
+    width:"33%",
+    backgroundColor:"#8ED090"
     
   }
 }
@@ -384,172 +385,157 @@ export default class Home extends React.Component {
     return {
       router: React.PropTypes.object.isRequired,
       socket: React.PropTypes.object.isRequired,
-      socket1: React.PropTypes.object.isRequired
-      // socket2: React.PropTypes.object.isRequired
+      socket1: React.PropTypes.object.isRequired,
+      socket2: React.PropTypes.object.isRequired
     }
   }
 
 
 componentDidMount=()=>{
- this.context.socket.on('start',(msg)=>{
-            alert('start');
-            console.log('---------------Socket Conected- 4000-----------------');
+//  this.context.socket.on('start',(msg)=>{
+//             alert('start');
+//             console.log('---------------Socket Conected- 4000-----------------');
 
-          //  this.setState({txView:true});
-          });
+//           //  this.setState({txView:true});
+//           });
 
-          this.context.socket.on('getapi',(msg)=>{
-            alert('getapi');
-            console.log('---------------Socket Conected- 4000-----------------');
+//           this.context.socket.on('getapi',(msg)=>{
+//             alert('getapi');
+//             console.log('---------------Socket Conected- 4000-----------------');
 
-          //  this.setState({txView:true});
-          });
+//           //  this.setState({txView:true});
+//           });
           
-          this.context.socket1.on('anotherapi',(msg)=>{
-            alert('anotherapi');
-            console.log('---------------Socket Conected 5000 ------------------');
+//           this.context.socket1.on('anotherapi',(msg)=>{
+//             alert('anotherapi');
+//             console.log('---------------Socket Conected 5000 ------------------');
 
-          //  this.setState({txView:true});
-          });
+//           //  this.setState({txView:true});
+//           });
           // this.context.socket2.on('start',(msg)=>{
           //   // alert('start');
           //   console.log('---------------Socket Conected 5500------------------');
 
-          // //  this.setState({txView:true});
+          // //  this.setState({txView:true}); 
           // });
 
           this.context.socket.on('kycdatarequest',(msg)=>{
-            console.log('---------------Socket Conected for 4000- kyc req-----------------');
+            console.log('---------------Socket Conected for kycdatarequest-----------------');
 
-            alert('kycdatarequest');
+            // Axios({ 
+  //   method:'GET',
+  //   url:'http://13.125.219.101:4000/userDataAPI',
+  //   headers: {  
+  //       'Content-Type': 'application/json',
+  //       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjQ1OTY0MzksInVzZXJuYW1lIjoiVWJpYmFua1VzZXIiLCJvcmdOYW1lIjoidWJpYmFuayIsImlhdCI6MTUyNDU2MDQzOX0.QWofd0eunqXri8k2HoSd0BOpmvWbtyi5QGXiv5xtgbo'
+  //   }
+  //   })
+  //   .then((data) => {
+  //   console.log('get all the data');
+  //   console.log(data);
+    
+    
+  //   if(data.data.userData.length==0){
+  //     let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
+  //     this.setState({txData:retrievedUserDetails});
+  //   }else{
+  //     sessionStorage.setItem('userLoginDetails',JSON.stringify(data.data));
+  //     // let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
+
+  //     data.data.userData.forEach((data,i)=>{
+
+  //     })
+  //     var obj={
+  //       tx:"29bdkjc1dhsj12",
+  //   block:3,
+  //   name:"Nicholas",
+  //   agency:"Pacific Gas"
+  //     }
+  //     this.setState({txData:retrievedUserDetails});
+  //   }
+           
+
+  //   })
+  //   .catch((error) => {
+  //   console.log(error);
+  //   console.log(error+"error in get Trade");
+  //   });
+            // alert('kycdatarequest');
             console.log(msg);
             var arr=msg.split(',');
             
-            // var obj={
-            //   tx:arr[0].substring(0,16)+'...',
-            //   block:"Block 17", 
-            //   msg:arr[2]+ ' '+ arr[3]+' '+arr[1]
-            // }
+            var obj={
+              tx:arr[0].substring(0,8)+'...',
+              block:"Block 17", 
+              msg:arr[1]+ ' '+ arr[2]+' '+arr[3]
+            }
         
-            // let newData=[obj].concat(this.state.submitData);
-            // this.setState({submitData:newData});
-            // setTimeout(()=>{
-            //   this.setState({validatorData:newData})
-            // },1500)
-            // setTimeout(()=>{
-            //   this.setState({miliuData:newData}) 
-            // },3000)
+            let newData=[obj].concat(this.state.submitData);
+            this.setState({submitData:newData});
+            setTimeout(()=>{
+              this.setState({validatorData:newData})
+            },1500)
+            setTimeout(()=>{
+              this.setState({miliuData:newData}) 
+            },3000)
             console.log(msg);
 
 
           //  this.setState({txView:true});
           });
-          // this.context.socket1.on('kycdatarequest',(msg)=>{
-          //   console.log('---------------Socket Conected for 5000- kyc request-----------------');
+         
+          var obj1;
+          this.context.socket1.on('kycrequestapproval',(msg)=>{
+            console.log('---------------Socket Conected for kycrequestapproval------------------');
+            console.log(msg);
 
-          //   alert('kycdatarequest');
-          //   console.log(msg);
-          //   var arr=msg.split(',');
-            
-          //   // var obj={
-          //   //   tx:arr[0].substring(0,16)+'...',
-          //   //   block:"Block 17", 
-          //   //   msg:arr[2]+ ' '+ arr[3]+' '+arr[1]
-          //   // }
+            // alert('kycrequestapproval');
+            var arr=msg.split(',');
+             obj1={
+              tx:arr[0].substring(0,8)+'...',
+              block:"Block 18", 
+              msg:arr[1]
+            }
         
-          //   // let newData=[obj].concat(this.state.submitData);
-          //   // this.setState({submitData:newData});
-          //   // setTimeout(()=>{
-          //   //   this.setState({validatorData:newData})
-          //   // },1500)
-          //   // setTimeout(()=>{
-          //   //   this.setState({miliuData:newData}) 
-          //   // },3000)
-          //   console.log(msg);
+            let newData=[obj1].concat(this.state.validatorData);
+            let newData1=[obj1].concat(this.state.submitData);
+            let newData2=[obj1].concat(this.state.miliuData);
+            this.setState({validatorData:newData});
+            setTimeout(()=>{
+              this.setState({submitData:newData1,miliuData:newData2});
+            },2500)
+          });
 
+          
+          this.context.socket2.on('getKYC',(msg)=>{
+            console.log('---------------------getKYC---------------');
+            console.log(msg);
+            // alert('Get kyc data on 2');
+            var obj2={
+              tx:"sdjh253761...",
+              block:"Block 19",
+              msg:"KYC Data"
+            }
+        
+            let newData3=[obj2].concat([obj1].concat(this.state.miliuData));
+            let newData4=[obj2].concat([obj1].concat(this.state.miliuData));
 
-          // //  this.setState({txView:true});
-          // });
-          // this.context.socket2.on('kycdatarequest',(msg)=>{
-          //   console.log('---------------Socket Conected for 5500 kyc request------------------');
+            setTimeout(()=>{
+              this.setState({miliuData:newData4});
+            },5000)   
 
-          //   alert('kycdatarequest');
-          //   console.log(msg);
-          //   var arr=msg.split(',');
-            
-          //   // var obj={
-          //   //   tx:arr[0].substring(0,16)+'...',
-          //   //   block:"Block 17", 
-          //   //   msg:arr[2]+ ' '+ arr[3]+' '+arr[1]
-          //   // }
-        
-          //   // let newData=[obj].concat(this.state.submitData);
-          //   // this.setState({submitData:newData});
-          //   // setTimeout(()=>{
-          //   //   this.setState({validatorData:newData})
-          //   // },1500)
-          //   // setTimeout(()=>{
-          //   //   this.setState({miliuData:newData}) 
-          //   // },3000)
-          //   console.log(msg);
-
-
-          // //  this.setState({txView:true});
-          // });
-          // this.context.socket1.on('kycrequestapproval',(msg)=>{
-          //   console.log('---------------Socket Conected for 5000------------------');
-
-          //   alert('kycrequestapproval');
-          //   var arr=msg.split(',');
-          //   var obj1={
-          //     tx:arr[0].substring(0,16)+'...',
-          //     block:"Block 18", 
-          //     msg:arr[1]
-          //   }
-        
-          //   let newData=[obj1].concat(this.state.validatorData);
-          //   let newData1=[obj1].concat(this.state.submitData);
-          //   let newData2=[obj1].concat(this.state.miliuData);
-          //   this.setState({validatorData:newData});
-          //   setTimeout(()=>{
-          //     this.setState({submitData:newData1,miliuData:newData2});
-          //   },2500)
-        
-          //   // var obj2={
-          //   //   tx:"TxID sdjh25376121",
-          //   //   block:"Block 8",
-          //   //   msg:"KYC Data"
-          //   // }
-        
-          //   // let newData3=[obj2].concat([obj1].concat(this.state.submitData));
-          //   // let newData4=[obj2].concat([obj1].concat(this.state.miliuData));
-        
-          //   // setTimeout(()=>{
-          //   //   this.setState({miliuData:newData4});
-             
-          //   // },4500)
-        
-          //   // setTimeout(()=>{
-          //   //   this.setState({submitData:newData3});
-          //   // },6000)
+            setTimeout(()=>{
+              this.setState({submitData:newData3});
+            },6000)
         
           
-          // //  this.setState({txView:true});
-          // });
+            console.log(msg);
 
-          // this.context.socket2.on('getKYC',(msg)=>{
-          //   alert('Get kyc data');
-          //   console.log(msg);
+          });
 
             
-
-          // //  this.setState({txView:true});
-          // });
-  
+         
   this.BootstrapData();
-  
- 
-  // this.closeActivityIndicator();
 }
 
 
@@ -564,7 +550,7 @@ console.log('-----------retrieveduser detail-----------', retrievedUserDetails);
 console.log('data');
 
   // this.intervalTrack = setInterval(() => this.tick(), 1000);
-console.log('arr length-------', retrievedUserDetails.userData[0].length);
+// console.log('arr length-------', retrievedUserDetails.userData[0].length);
   for(var i=0; i<retrievedUserDetails.userData.length;i++){
     if(retrievedUserDetails.userData[i][0]=='Olivia'){
     var objs={
@@ -747,7 +733,7 @@ console.log('arr length-------', retrievedUserDetails.userData[0].length);
           style={{marginTop:"20px"}}
           labelStyle={{fontSize:"24px"}}
          >
-           <Avatar src="data:image/png;base64,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" />
+           <Avatar src="../images/logo.svg" />
            miliu
          </Chip>
          </center>

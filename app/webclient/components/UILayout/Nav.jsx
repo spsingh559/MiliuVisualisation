@@ -106,11 +106,15 @@ export default class Nav extends React.Component{
     
 		return(
 			<div>
-			 <AppBar
+        <div style={{position: "fixed",top:'0',backgroundColor:"black", width:"100%", height:"70px",color:"white"}}>
+        <center>
+          <h2> Blockchain Visualisation </h2>
+          </center>
+        </div>
+			 {/* <AppBar
              title="Blockchain Visualisation"
-             iconClassNameRight="muidocs-icon-navigation-expand-more"
-             style={{position: "fixed",top:'0'}}
-            >
+             style={{position: "fixed",top:'0',color:"black"}}
+            > */}
               
             {/* <FlatButton style={style.labelStyle1} label="End Demo" onTouchTap={this.upcomingNavigation} /> */}
            {/* <FlatButton style={style.labelStyle} label="Current Projects" onTouchTap={this.networkNavigation} />
@@ -126,7 +130,7 @@ export default class Nav extends React.Component{
                 >
                 </ListItem>
           </List>  */}
-           </AppBar>
+           {/* </AppBar> */}
          
            {/* <Drawer
           docked={false}
