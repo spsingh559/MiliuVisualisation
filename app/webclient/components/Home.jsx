@@ -108,7 +108,7 @@ componentDidMount=()=>{
           this.context.socket.on('kycdatarequest',(msg)=>{
             console.log('---------------Socket Conected for kycdatarequest-----------------');
 
-            console.log(msg);
+            // console.log(msg);
             var arr=msg.split(',');
             
             
@@ -130,7 +130,7 @@ componentDidMount=()=>{
             setTimeout(()=>{
               this.setState({miliuData:newData}) 
             },3000)
-            console.log(msg);
+            // console.log(msg);
 
 
           //  this.setState({txView:true});
@@ -139,7 +139,7 @@ componentDidMount=()=>{
           var obj1;
           this.context.socket1.on('kycrequestapproval',(msg)=>{
             console.log('---------------Socket Conected for kycrequestapproval------------------');
-            console.log(msg);
+            // console.log(msg);
 
             // alert('kycrequestapproval');
             var arr=msg.split(',');
@@ -165,7 +165,7 @@ componentDidMount=()=>{
           
           this.context.socket2.on('getKYC',(msg)=>{
             console.log('---------------------getKYC---------------');
-            console.log(msg);
+            // console.log(msg);
             // alert('Get kyc data on 2');
             // var obj2={
             //   tx:"sdjh253761...",
@@ -196,7 +196,7 @@ componentDidMount=()=>{
             },4000)
         
           
-            console.log(msg);
+            // console.log(msg);
 
           });
 
@@ -220,7 +220,7 @@ BootstrapData=()=>{
     })
     .then((data) => {
     console.log('get all the data');
-    console.log(data);
+    // console.log(data);
     
     
     if(data.data.length==0){
@@ -228,7 +228,7 @@ BootstrapData=()=>{
     }else{
       var i=0;
       var interval;
-     console.log(data.data[0]);
+    //  console.log(data.data[0]);
       interval = setInterval(() =>{
         if(i==4){
           clearInterval(interval);
