@@ -11,6 +11,7 @@ export default class BootstrapData extends React.Component{
                     <BootstrapDataRow
                     key={i}
                     data={data}
+                    i={i}
                     />
                     )
             //   },1000)
@@ -18,7 +19,7 @@ export default class BootstrapData extends React.Component{
         })
 
         return(
-            <Table striped  condensed hover>
+            <Table striped  condensed >
   <thead>
     <tr>
       <th>Transaction Hash</th>

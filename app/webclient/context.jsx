@@ -5,9 +5,9 @@ import React from 'react';
 export default class ContextComponent extends React.Component {
   getChildContext() {
     return {
-      socket:io('http://13.125.219.101:4000'),
-      socket1:io('http://13.125.219.101:5000'),
-      socket2:io('http://13.125.219.101:6000')
+      socket:io('http://10.201.92.216:4000'),
+      socket1:io('http://10.201.92.216:5000'),
+      socket2:io('http://10.201.92.216:5500')
  
 
     }

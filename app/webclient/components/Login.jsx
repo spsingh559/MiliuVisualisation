@@ -308,35 +308,35 @@ export default class LandingPage extends React.Component{
       }
 
       componentDidMount=()=>{
-        console.log('----------api----------');
-        Axios({ 
-    method:'GET',
-    url:'http://13.125.219.101:4000/userDataAPI',
-    headers: {  
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjQ1OTY0MzksInVzZXJuYW1lIjoiVWJpYmFua1VzZXIiLCJvcmdOYW1lIjoidWJpYmFuayIsImlhdCI6MTUyNDU2MDQzOX0.QWofd0eunqXri8k2HoSd0BOpmvWbtyi5QGXiv5xtgbo'
-    }
-    })
-    .then((data) => {
-    console.log('get all the data');
-    console.log(data);
+        // console.log('----------api----------');
+    //     Axios({ 
+    // method:'GET',
+    // url:'http://10.201.92.216:4000/userDataAPI',
+    // headers: {  
+    //     'Content-Type': 'application/json',
+    //     'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjQ1OTY0MzksInVzZXJuYW1lIjoiVWJpYmFua1VzZXIiLCJvcmdOYW1lIjoidWJpYmFuayIsImlhdCI6MTUyNDU2MDQzOX0.QWofd0eunqXri8k2HoSd0BOpmvWbtyi5QGXiv5xtgbo'
+    // }
+    // })
+    // .then((data) => {
+    // console.log('get all the data');
+    // console.log(data);
     
     
-    if(data.data.userData.length==0){
-      // let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
-      // this.setState({txData:retrievedUserDetails});
-      console.log('---------no data found, using session data--------------------');
-    }else{
-      console.log('-----------length is more than zero-----------------')
-      sessionStorage.setItem('userLoginDetails',JSON.stringify(data.data));
-    }
-      // let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
+    // if(data.data.userData.length==0){
+    //   // let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
+    //   // this.setState({txData:retrievedUserDetails});
+    //   console.log('---------no data found, using session data--------------------');
+    // }else{
+    //   console.log('-----------length is more than zero-----------------')
+    //   sessionStorage.setItem('userLoginDetails',JSON.stringify(data.data));
+    // }
+    //   // let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
 
-    })
-    .catch((error) => {
-    console.log(error);
-    console.log(error+"error in get Trade");
-    });
+    // })
+    // .catch((error) => {
+    // console.log(error);
+    // console.log(error+"error in get Trade");
+    // });
       }
 
     loginNaviagtion=()=>{

@@ -16,354 +16,64 @@ import Validator from './Validator';
 import Miliu from './Miliu'
 // import Paper from 'material-ui/Paper';
 
-var obj = { userData:[
-   [ 'Samantha',
 
-      'Geller',
-
-      '968590655',
-
-      '6656087470',
-
-      'blockchain.miliu@wipro.com',
-
-      '03/02/2016',
-
-      'Pacific-Gas-&-Electric' ],
-
-    [ 'Samantha',
-
-      'Geller',
-
-      '968590655',
-
-      '6656087470',
-
-      'blockchain.miliu@wipro.com',
-
-      '01/05/2018',
-
-      'Miliu' ],
-
-    [ 'Samantha',
-
-      'Geller',
-
-      '968590655',
-
-      '6656087470',
-
-      'blockchain.miliu@wipro.com',
-
-      '15/10/2014',
-
-      'Georgia-Natural-gas' ],
-
-    [ 'Samantha',
-
-      'Geller',
-
-      '968590655',
-
-      '6656087470',
-
-      'blockchain.miliu@wipro.com',
-
-      '12/11/2009',
-
-      'Verizon' ],
-
-    [ 'Nicholas',
-
-      'Adams',
-
-      '968590700',
-
-      '6343454567',
-
-      'blockchain.miliu@wipro.com',
-
-     '13/08/2010',
-
-      'Pacific-Gas-&-Electric' ],
-
-    [ 'Nicholas',
-
-      'Adams',
-
-      '968590700',
-
-      '6343454567',
-
-      'blockchain.miliu@wipro.com',
-
-      '20/07/2015',
-
-      'Georgia-Natural-gas' ],
-
-    [ 'Nicholas',
-
-      'Adams',
-
-      '968590700',
-
-      '6343454567',
-
-      'blockchain.miliu@wipro.com',
-
-      '14/04/2014',
-
-      'Verizon' ],
-
-    [ 'Nicholas',
-
-      'Adams',
-
-      '968590700',
-
-      '6343454567',
-
-      'blockchain.miliu@wipro.com',
-
-      '01/09/2016',
-
-      'Miliu' ],
-
-    [ 'Olivia',
-
-      'Smith',
-
-      '568590655',
-
-      '3656087470',
-
-      'blockchain.miliu@wipro.com',
-
-      '28/01/2010',
-
-      'Pacific-Gas-&-Electric' ],
-
-    [ 'Olivia',
-
-      'Smith',
-
-      '568590655',
-
-      '3656087470',
-
-      'blockchain.miliu@wipro.com',
-
-      '30/06/2015',
-
-      'Verizon' ],
-
-    [ 'Olivia',
-
-      'Smith',
-
-      '568590655',
-
-      '3656087470',
-
-      'blockchain.miliu@wipro.com',
-
-      '16/01/2018',
-
-      'Miliu' ],
-
-    [ 'Olivia',
-
-      'Smith',
-
-      '568590655',
-
-      '3656087470',
-
-      'blockchain.miliu@wipro.com',
-
-      '05/07/2014',
-
-      'Georgia-Natural-gas' ],
-
-    [ 'Michael',
-
-      'West',
-
-      '942038483',
-
-      '6213874473',
-
-      'blockchain.miliu@wipro.com',
-
-      '30/01/2002',
-
-      'Georgia-Natural-gas' ],
-
-    [ 'Michael',
-
-      'West',
-
-      '942038483',
-
-      '6213874473',
-
-      'blockchain.miliu@wipro.com',
-
-      '29/01/2001',
-
-      'Verizon' ],
-
-    [ 'Michael',
-
-      'West',
-
-      '942038483',
-
-      '6213874473',
-
-      'blockchain.miliu@wipro.com',
-
-      '27/01/2017',
-
-      'Pacific-Gas-&-Electric' ],
-
-    [ 'Michael',
-
-      'West',
-
-      '942038483',
-
-      '6213874473',
-
-      'blockchain.miliu@wipro.com',
-
-      '28/01/2017',
-
-      'Miliu' ] ],
-
- txData:
-
-  [ '577fadf370b02fd2bbcccb140a554d7991cb9b2080798a8db49cf8f6055919a6',
-
-    '24cfa9eb5870087a60bfa5e209b0a4db4091d2dec05a34b8690adc9495b7d8d5',
-
-    '61a6271f282f909ffe67d5dbb394c97a3d76825c4f3065159ef5422fc98c72b9',
-
-    'b01be706fabb900a3f3e7562707999bb04a4ade470868aee80566faac9bfd967',
-
-    '194b49b626b90db190ed8f72a4fdab4a83b87caca24bddaa1358b1a6c6966ac5',
-
-    '59997e06038da5b62e48b3cf768c6aee8bb078fbda56f9c6f2700ea33c86750a',
-
-    'e981c0bc8ef9aefe5c9f4a361ff3a8b9506b8a7f1e68c4c2393623e402b853e2',
-
-    '3027b64c12b0a74b9c94e18a0ac2a993cdae371584924e39adf12d220e619e46',
-
-    'b6620810d376aaca88f06c156bb88ccca711145ce76ccdb32fc5365872cc8074',
-
-    '391ef1d4cf01a86c9349404b02a4ab127236e5158bf44ac53715da27a7fdf84e',
-
-    '90c62e047939a926f60491b837ba0f2b80dcba99ac6251eeaaea2ad4427014ee',
-
-    '58068ca3b1887df78976f44be8789a57595ce25947bcdfdde8d7ad524f1bbac3',
-
-    '722c24fc23744d2e0e058e8fc51c0ceeb543ec4ae484c66e70615a361898620b',
-
-    'f73c7520b9bdb17e480ec6cf5d5b423142c0bf9a0266aed74c8c5038d320ecac',
-
-    '6c31be0ee2def8a97213f75b9b4fb248879aa63d16b454dbfb59c8f79818b0f0',
-
-    '5ee2399b3bccc63bc1dca57ea6044b84d810dd7bce3b1dcf9f8440682f82a818' ] }
-
-
-const txData=[
-  {
-    tx:"29bdkjc1dhsj12",
-    block:5,
-    name:"Samanth",
-    agency:"VERIZON"
-  },
-  {
-    tx:"29bdkjc1dhsj12",
-    block:4,
-    name:"Samanth",
-    agency:"Miliu"
-  },
-  {
-    tx:"29bdkjc1dhsj12",
-    block:3,
-    name:"Nicholas",
-    agency:"Pacific Gas"
-  },
-  {
-    tx:"29bdkjc1dhsj12",
-    block:2,
-    name:"Emily",
-    agency:"Miliu"
-  },
-  {
-    tx:"29bdkjc1dhsj12",
-    block:1,
-    name:"Olivia",
-    agency:"Georgia Gas"
-  }
-
-]
 
 const style=
 {
   row1col1:{
     height:"100px",
     width:"33%",
-    backgroundColor:"#A5EBA7"
+    backgroundColor:"#D4F6BB"
   
   },
   row1col2:{
     height:"100px",
     width:"33%",
-    backgroundColor:"#B3FDB0"
+    backgroundColor:"#F3F0D3"
    
   },
   row1col3:{
     height:"100px",
     width:"33%",
-    backgroundColor:"#8ED090"
+    backgroundColor:"#D8ECF7"
     
   },
   row2col1:{
     height:"150px",
     width:"33%",
-    backgroundColor:"#A5EBA7"
-  
+    backgroundColor:"#D4F6BB",
+    overflowY: "auto",
+    overflowX: "hidden"
   },
   row2col2:{
     height:"150px",
     width:"33%",
-    backgroundColor:"#B3FDB0"
-   
+    backgroundColor:"#F3F0D3",
+    overflowY: "auto",overflowX: "hidden"
   },
   row2col3:{
     height:"150px",
     width:"33%",
-    backgroundColor:"#8ED090"
+    backgroundColor:"#D8ECF7",
+    overflowY: "auto",overflowX: "hidden"
     
   },
   row3col1:{
     height:"250px",
     width:"33%",
-    backgroundColor:"#A5EBA7"
+    backgroundColor:"#D4F6BB"
   
   },
   row3col2:{
     height:"250px",
     width:"33%",
-    backgroundColor:"#B3FDB0"
+    backgroundColor:"#F3F0D3"
    
   },
   row3col3:{
     height:"250px",
     width:"33%",
-    backgroundColor:"#8ED090"
+    backgroundColor:"#D8ECF7"
     
   }
 }
@@ -378,6 +88,8 @@ export default class Home extends React.Component {
     animating:false,
     txData:[],
     secondsElapsed: 0,
+    seconds:16
+    
   }
 
 
@@ -392,83 +104,23 @@ export default class Home extends React.Component {
 
 
 componentDidMount=()=>{
-//  this.context.socket.on('start',(msg)=>{
-//             alert('start');
-//             console.log('---------------Socket Conected- 4000-----------------');
-
-//           //  this.setState({txView:true});
-//           });
-
-//           this.context.socket.on('getapi',(msg)=>{
-//             alert('getapi');
-//             console.log('---------------Socket Conected- 4000-----------------');
-
-//           //  this.setState({txView:true});
-//           });
-          
-//           this.context.socket1.on('anotherapi',(msg)=>{
-//             alert('anotherapi');
-//             console.log('---------------Socket Conected 5000 ------------------');
-
-//           //  this.setState({txView:true});
-//           });
-          // this.context.socket2.on('start',(msg)=>{
-          //   // alert('start');
-          //   console.log('---------------Socket Conected 5500------------------');
-
-          // //  this.setState({txView:true}); 
-          // });
 
           this.context.socket.on('kycdatarequest',(msg)=>{
             console.log('---------------Socket Conected for kycdatarequest-----------------');
 
-            // Axios({ 
-  //   method:'GET',
-  //   url:'http://13.125.219.101:4000/userDataAPI',
-  //   headers: {  
-  //       'Content-Type': 'application/json',
-  //       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjQ1OTY0MzksInVzZXJuYW1lIjoiVWJpYmFua1VzZXIiLCJvcmdOYW1lIjoidWJpYmFuayIsImlhdCI6MTUyNDU2MDQzOX0.QWofd0eunqXri8k2HoSd0BOpmvWbtyi5QGXiv5xtgbo'
-  //   }
-  //   })
-  //   .then((data) => {
-  //   console.log('get all the data');
-  //   console.log(data);
-    
-    
-  //   if(data.data.userData.length==0){
-  //     let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
-  //     this.setState({txData:retrievedUserDetails});
-  //   }else{
-  //     sessionStorage.setItem('userLoginDetails',JSON.stringify(data.data));
-  //     // let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
-
-  //     data.data.userData.forEach((data,i)=>{
-
-  //     })
-  //     var obj={
-  //       tx:"29bdkjc1dhsj12",
-  //   block:3,
-  //   name:"Nicholas",
-  //   agency:"Pacific Gas"
-  //     }
-  //     this.setState({txData:retrievedUserDetails});
-  //   }
-           
-
-  //   })
-  //   .catch((error) => {
-  //   console.log(error);
-  //   console.log(error+"error in get Trade");
-  //   });
-            // alert('kycdatarequest');
             console.log(msg);
             var arr=msg.split(',');
             
+            
             var obj={
               tx:arr[0].substring(0,8)+'...',
-              block:"Block 17", 
+              block:this.state.seconds, 
               msg:arr[1]+ ' '+ arr[2]+' '+arr[3]
             }
+
+            this.setState(prevState => ({
+              seconds: prevState.seconds + 1
+            }));
         
             let newData=[obj].concat(this.state.submitData);
             this.setState({submitData:newData});
@@ -493,7 +145,7 @@ componentDidMount=()=>{
             var arr=msg.split(',');
              obj1={
               tx:arr[0].substring(0,8)+'...',
-              block:"Block 18", 
+              block:this.state.seconds, 
               msg:arr[1]
             }
         
@@ -503,7 +155,11 @@ componentDidMount=()=>{
             this.setState({validatorData:newData});
             setTimeout(()=>{
               this.setState({submitData:newData1,miliuData:newData2});
-            },2500)
+            },1000)
+
+            this.setState(prevState => ({
+              seconds: prevState.seconds + 1
+            }));
           });
 
           
@@ -511,22 +167,33 @@ componentDidMount=()=>{
             console.log('---------------------getKYC---------------');
             console.log(msg);
             // alert('Get kyc data on 2');
-            var obj2={
-              tx:"sdjh253761...",
-              block:"Block 19",
-              msg:"KYC Data"
-            }
+            // var obj2={
+            //   tx:"sdjh253761...",
+            //   block:"Block 19",
+            //   msg:"KYC Data"
+            // }
         
-            let newData3=[obj2].concat([obj1].concat(this.state.miliuData));
-            let newData4=[obj2].concat([obj1].concat(this.state.miliuData));
+            var arr=msg.split(',');
+            var obj2={
+              tx:arr[0].substring(0,8)+'...',
+              block:this.state.seconds, 
+              msg:arr[1]
+            }
+
+            let newData3=[obj2].concat(this.state.submitData);
+            let newData4=[obj2].concat(this.state.miliuData);
+
+            this.setState(prevState => ({
+              seconds: prevState.seconds + 1
+            }));
 
             setTimeout(()=>{
               this.setState({miliuData:newData4});
-            },5000)   
+            },3000)   
 
             setTimeout(()=>{
               this.setState({submitData:newData3});
-            },6000)
+            },4000)
         
           
             console.log(msg);
@@ -542,158 +209,82 @@ componentDidMount=()=>{
 
 BootstrapData=()=>{
   console.log('-----------prepring bootstrap data-------------------------------');
-var arr=[];
-
-let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
-
-console.log('-----------retrieveduser detail-----------', retrievedUserDetails);
-console.log('data');
-
   // this.intervalTrack = setInterval(() => this.tick(), 1000);
-// console.log('arr length-------', retrievedUserDetails.userData[0].length);
-  for(var i=0; i<retrievedUserDetails.userData.length;i++){
-    if(retrievedUserDetails.userData[i][0]=='Olivia'){
-    var objs={
-      tx:retrievedUserDetails.txData[i].substring(0,16)+'...',
-      block:i,
-      name:retrievedUserDetails.userData[i][0]+" "+ retrievedUserDetails.userData[i][1],
-      agency:retrievedUserDetails.userData[i][6]
-      }
-      arr.push(objs)
-      console.log(objs);   
+  Axios({ 
+    method:'GET',
+    url:'http://10.201.92.216:4000/userDataAPI',
+    headers: {  
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjQ1OTY0MzksInVzZXJuYW1lIjoiVWJpYmFua1VzZXIiLCJvcmdOYW1lIjoidWJpYmFuayIsImlhdCI6MTUyNDU2MDQzOX0.QWofd0eunqXri8k2HoSd0BOpmvWbtyi5QGXiv5xtgbo'
     }
+    })
+    .then((data) => {
+    console.log('get all the data');
+    console.log(data);
     
-  }
-  this.setState({txData:arr});
-//   console.log(arr);
-//   var count=0;
-//   if(count==4){
-//     this.clearInterval(this.intervalTrack );
-// console.log('end');
-//   }else{
-//   this.intervalTrack = setInterval(() =>{ 
     
-//     let newData=this.state.txData.concat([arr[count]]);
-//     this.setState({txData:newData});
-//     count++;
-//   },1000);
-// }
+    if(data.data.length==0){
+     alert('data is not available, check Mongo DB');
+    }else{
+      var i=0;
+      var interval;
+     console.log(data.data[0]);
+      interval = setInterval(() =>{
+        if(i==4){
+          clearInterval(interval);
+        }else{
+          let newData=[data.data[i]].concat(this.state.txData);
+        this.setState({txData:newData});
+        i++}
+      }, 1000);
+    
 
+      // var intervalId = setInterval({
+      //   this.setState({txData:data.data[0]});
+      // }, 1000);
 
-  // setTimeout(()=>{
-  //   this.setState({validatorData:newData})
-  // },1500)
+      //   this.setState({txData:data.data[0]});
+      // console.log('-----------length is more than zero-----------------')
+      // sessionStorage.setItem('userLoginDetails',JSON.stringify(data.data));
+    }
+      // let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
+
+    })
+    .catch((error) => {
+    console.log(error);
+    console.log(error+"error in get Trade");
+    });
+     
+
+// var arr=[];
+
+// let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
+
+// console.log('-----------retrieveduser detail-----------', retrievedUserDetails);
+// console.log('data');
+
+//   // this.intervalTrack = setInterval(() => this.tick(), 1000);
+// // console.log('arr length-------', retrievedUserDetails.userData[0].length);
+//   for(var i=0; i<retrievedUserDetails.userData.length;i++){
+//     if(retrievedUserDetails.userData[i][0]=='Olivia'){
+//     var objs={
+//       tx:retrievedUserDetails.txData[i].substring(0,16)+'...',
+//       block:i,
+//       name:retrievedUserDetails.userData[i][0]+" "+ retrievedUserDetails.userData[i][1],
+//       agency:retrievedUserDetails.userData[i][6]
+//       }
+//       arr.push(objs)
+//       console.log(objs);   
+//     }
+    
+//   }
   
+//   this.setState({txData:arr});
 
-  // this.setState({txData:arr});
-  // arr.forEach((data)=>{
-
-  // })
-
-
- 
-   
-
-    
-  
-  
-  // Axios({ 
-  //   method:'GET',
-  //   url:'http://13.125.219.101:4000/userDataAPI',
-  //   headers: {  
-  //       'Content-Type': 'application/json',
-  //       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjQ1OTY0MzksInVzZXJuYW1lIjoiVWJpYmFua1VzZXIiLCJvcmdOYW1lIjoidWJpYmFuayIsImlhdCI6MTUyNDU2MDQzOX0.QWofd0eunqXri8k2HoSd0BOpmvWbtyi5QGXiv5xtgbo'
-  //   }
-  //   })
-  //   .then((data) => {
-  //   console.log('get all the data');
-  //   console.log(data);
-    
-    
-  //   if(data.data.userData.length==0){
-  //     let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
-  //     this.setState({txData:retrievedUserDetails});
-  //   }else{
-  //     sessionStorage.setItem('userLoginDetails',JSON.stringify(data.data));
-  //     // let retrievedUserDetails= JSON.parse(sessionStorage.getItem('userLoginDetails'));
-
-  //     data.data.userData.forEach((data,i)=>{
-
-  //     })
-  //     var obj={
-  //       tx:"29bdkjc1dhsj12",
-  //   block:3,
-  //   name:"Nicholas",
-  //   agency:"Pacific Gas"
-  //     }
-  //     this.setState({txData:retrievedUserDetails});
-  //   }
-           
-
-  //   })
-  //   .catch((error) => {
-  //   console.log(error);
-  //   console.log(error+"error in get Trade");
-  //   });
-    console.log('-----------end bootstrap data-------------------------------');
+//     console.log('-----------end bootstrap data-------------------------------');
 
 }
 
-  // submitForm=()=>{
-  //   var obj={
-  //     tx:"TxID sdjh25376121",
-  //     block:"Block 6",
-  //     msg:"KYC Request for Olivia"
-  //   }
-
-  //   let newData=[obj].concat(this.state.submitData);
-  //   this.setState({submitData:newData});
-  //   setTimeout(()=>{
-  //     this.setState({validatorData:newData})
-  //   },1500)
-  //   setTimeout(()=>{
-  //     this.setState({miliuData:newData})
-  //   },3000)
-
-  // }
-
-  OTPFunction=()=>{
-    // var obj1={
-    //   tx:"TxID sdjh25376121",
-    //   block:"Block 7",
-    //   msg:"Approval by Validator"
-    // }
-
-    // let newData=[obj1].concat(this.state.validatorData);
-    // let newData1=[obj1].concat(this.state.submitData);
-    // let newData2=[obj1].concat(this.state.miliuData);
-    // this.setState({validatorData:newData});
-    // setTimeout(()=>{
-    //   this.setState({submitData:newData1,miliuData:newData2});
-    // },2500)
-
-    // var obj2={
-    //   tx:"TxID sdjh25376121",
-    //   block:"Block 8",
-    //   msg:"KYC Data"
-    // }
-
-    // let newData3=[obj2].concat([obj1].concat(this.state.submitData));
-    // let newData4=[obj2].concat([obj1].concat(this.state.miliuData));
-
-    // setTimeout(()=>{
-    //   this.setState({miliuData:newData4});
-     
-    // },4500)
-
-    // setTimeout(()=>{
-    //   this.setState({submitData:newData3});
-    // },6000)
-
-
-   
-
-  }
   
   render() {
     
@@ -733,7 +324,7 @@ console.log('data');
           style={{marginTop:"20px"}}
           labelStyle={{fontSize:"24px"}}
          >
-           <Avatar src="../images/logo.svg" />
+           <Avatar src="../images/icon.png" />
            miliu
          </Chip>
          </center>
@@ -759,6 +350,7 @@ console.log('data');
          </Col>
 
          <Col xs={3} style={style.row2col2}>
+         
         <Validator validatorData={this.state.validatorData}/>
          </Col>
 

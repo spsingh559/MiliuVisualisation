@@ -17,7 +17,7 @@ export default class Miliu extends React.Component{
         })
 
         return(
-            <Table striped  condensed hover style={{bottom:"0", position:"absolute"}}>
+            <Table striped  condensed  style={{bottom:"0", position:"relative"}}>
   <tbody>
       {newData}
       </tbody>

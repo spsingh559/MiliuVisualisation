@@ -16,7 +16,7 @@ export default class UBITx extends React.Component{
         })
 
         return(
-            <Table striped  condensed hover style={{bottom:"0", position:"absolute"}}>
+            <Table striped  condensed  style={{bottom:"0", position:"relative"}}>
             {/* <thead>
     <tr>
       <th>Transaction Hash</th>
